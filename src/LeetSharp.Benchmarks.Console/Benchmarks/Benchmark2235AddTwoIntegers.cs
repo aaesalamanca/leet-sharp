@@ -1,12 +1,12 @@
 using BenchmarkDotNet.Attributes;
-using Solution = LeetSharp.Solutions.Library.Implementations.Problem2235AddTwoIntegers;
+using LeetSharp.Solutions.Library.Implementations;
 
 namespace LeetSharp.Benchmarks.Console.Benchmarks;
 
 [MemoryDiagnoser]
-public class Problem2235AddTwoIntegers
+public class Benchmark2235AddTwoIntegers
 {
-    private readonly Solution _problem2235AddTwoIntegers = new();
+    private readonly Problem2235AddTwoIntegers _problem2235AddTwoIntegers = new();
 
     // Uncomment the data set to run the benchmark against.
     public IEnumerable<object[]> Data()

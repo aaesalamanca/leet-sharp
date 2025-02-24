@@ -1,9 +1,9 @@
+using LeetSharp.Solutions.Library.Implementations;
 using LeetSharp.Solutions.Library.Interfaces;
-using Solution = LeetSharp.Solutions.Library.Implementations.Problem0013RomanToInteger;
 
 namespace LeetSharp.Solutions.Library.UnitTest;
 
-public class Problem0013RomanToInteger
+public class Test0013RomanToInteger
 {
     [Theory]
     [InlineData("III", 3)]
@@ -12,7 +12,7 @@ public class Problem0013RomanToInteger
     public void RomanToInteger_ReturnsTarget(string s, int expected)
     {
         // Arrange.
-        IProblem0013RomanToInteger sut = new Solution();
+        IProblem0013RomanToInteger sut = new Problem0013RomanToInteger();
 
         // Act.
         var actual = sut.RomanToInt(s);

@@ -3,7 +3,7 @@ using LeetSharp.Solutions.Library.Interfaces;
 
 namespace LeetSharp.Solutions.Library.UnitTest;
 
-public class Problem0001TwoSum
+public class Test0001TwoSum
 {
     [Theory]
     [InlineData(new[] { 2, 7, 11, 15 }, 9, new[] { 0, 1 })]

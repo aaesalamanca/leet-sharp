@@ -4,7 +4,7 @@ using LeetSharp.Solutions.Library.Implementations.Problem0001TwoSum;
 namespace LeetSharp.Benchmarks.Console.Benchmarks;
 
 [MemoryDiagnoser]
-public class Problem0001TwoSum
+public class Benchmark0001TwoSum
 {
     private readonly Random _random = new();
     private readonly BruteForce _bruteForce = new();

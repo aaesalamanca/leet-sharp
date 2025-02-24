@@ -1,12 +1,12 @@
 using BenchmarkDotNet.Attributes;
-using Solution = LeetSharp.Solutions.Library.Implementations.Problem0020ValidParentheses;
+using LeetSharp.Solutions.Library.Implementations;
 
 namespace LeetSharp.Benchmarks.Console.Benchmarks;
 
 [MemoryDiagnoser]
-public class Problem0020ValidParentheses
+public class Benchmark0020ValidParentheses
 {
-    private readonly Solution _problem0020ValidParentheses = new();
+    private readonly Problem0020ValidParentheses _problem0020ValidParentheses = new();
 
     // Uncomment the data set to run the benchmark against.
     public IEnumerable<string> Data()

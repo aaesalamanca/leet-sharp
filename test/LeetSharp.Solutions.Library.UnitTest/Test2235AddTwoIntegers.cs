@@ -3,7 +3,7 @@ using Solution = LeetSharp.Solutions.Library.Implementations.Problem2235AddTwoIn
 
 namespace LeetSharp.Solutions.Library.UnitTest;
 
-public class Problem2235AddTwoIntegers
+public class Test2235AddTwoIntegers
 {
     [Theory]
     [InlineData(12, 5, 17)]

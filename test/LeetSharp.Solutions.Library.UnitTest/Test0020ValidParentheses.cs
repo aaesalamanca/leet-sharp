@@ -3,7 +3,7 @@ using Solution = LeetSharp.Solutions.Library.Implementations.Problem0020ValidPar
 
 namespace LeetSharp.Solutions.Library.UnitTest;
 
-public class Problem0020ValidParentheses
+public class Test0020ValidParentheses
 {
     [Theory]
     [InlineData("()", true)]

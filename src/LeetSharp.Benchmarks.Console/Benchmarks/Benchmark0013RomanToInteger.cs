@@ -1,12 +1,12 @@
 using BenchmarkDotNet.Attributes;
-using Solution = LeetSharp.Solutions.Library.Implementations.Problem0013RomanToInteger;
+using LeetSharp.Solutions.Library.Implementations;
 
 namespace LeetSharp.Benchmarks.Console.Benchmarks;
 
 [MemoryDiagnoser]
-public class Problem0013RomanToInteger
+public class Benchmark0013RomanToInteger
 {
-    private readonly Solution _problem0013RomanToInteger = new();
+    private readonly Problem0013RomanToInteger _problem0013RomanToInteger = new();
 
     // Uncomment the data set to run the benchmark against.
     public IEnumerable<string> Data()

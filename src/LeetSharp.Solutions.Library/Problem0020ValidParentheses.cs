@@ -1,10 +1,8 @@
-using LeetSharp.Solutions.Library.Interfaces;
+namespace LeetSharp.Solutions.Library;
 
-namespace LeetSharp.Solutions.Library.Implementations;
-
-public class Problem0020ValidParentheses : IProblem0020ValidParentheses
+public static class Problem0020ValidParentheses
 {
-    public bool IsValid(string s)
+    public static bool IsValid(string s)
     {
         var opens = new Stack<char>();
 
@@ -23,7 +21,7 @@ public class Problem0020ValidParentheses : IProblem0020ValidParentheses
         return opens.Count == 0;
     }
 
-    char GetOpenFromClose(char close) =>
+    static char GetOpenFromClose(char close) =>
         close switch
         {
             ')' => '(',

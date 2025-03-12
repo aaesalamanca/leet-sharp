@@ -1,10 +1,8 @@
-using LeetSharp.Solutions.Library.Interfaces;
+namespace LeetSharp.Solutions.Library;
 
-namespace LeetSharp.Solutions.Library.Implementations;
-
-public class Problem0013RomanToInteger : IProblem0013RomanToInteger
+public static class Problem0013RomanToInteger
 {
-    public int RomanToInt(string s)
+    public static int RomanToInt(string s)
     {
         var romanInt = RomanToIntArray(s);
         var sum = 0;
@@ -25,7 +23,7 @@ public class Problem0013RomanToInteger : IProblem0013RomanToInteger
         return sum;
     }
 
-    int[] RomanToIntArray(string s)
+    static int[] RomanToIntArray(string s)
     {
         var romanInt = new int[s.Length];
         for (int i = 0; i < s.Length; i++)

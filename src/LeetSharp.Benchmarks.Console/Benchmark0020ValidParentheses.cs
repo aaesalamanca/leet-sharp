@@ -1,18 +1,16 @@
 using BenchmarkDotNet.Attributes;
-using LeetSharp.Solutions.Library.Implementations;
+using LeetSharp.Solutions.Library;
 
-namespace LeetSharp.Benchmarks.Console.Benchmarks;
+namespace LeetSharp.Benchmarks.Console;
 
 [MemoryDiagnoser]
 public class Benchmark0020ValidParentheses
 {
-    private readonly Problem0020ValidParentheses _problem0020ValidParentheses = new();
-
     // Uncomment the data set to run the benchmark against.
     public IEnumerable<string> Data()
     {
-        // yield return "()";
-        yield return "()[]{}";
+        yield return "()";
+        // yield return "()[]{}";
         // yield return "(]";
         // yield return "([])";
         // yield return "]";
@@ -22,5 +20,5 @@ public class Benchmark0020ValidParentheses
 
     [Benchmark]
     [ArgumentsSource(nameof(Data))]
-    public bool Solution(string s) => _problem0020ValidParentheses.IsValid(s);
+    public bool IsValid(string s) => Problem0020ValidParentheses.IsValid(s);
 }

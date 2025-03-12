@@ -1,13 +1,11 @@
 using BenchmarkDotNet.Attributes;
-using LeetSharp.Solutions.Library.Implementations;
+using LeetSharp.Solutions.Library;
 
-namespace LeetSharp.Benchmarks.Console.Benchmarks;
+namespace LeetSharp.Benchmarks.Console;
 
 [MemoryDiagnoser]
 public class Benchmark2235AddTwoIntegers
 {
-    private readonly Problem2235AddTwoIntegers _problem2235AddTwoIntegers = new();
-
     // Uncomment the data set to run the benchmark against.
     public IEnumerable<object[]> Data()
     {
@@ -17,5 +15,5 @@ public class Benchmark2235AddTwoIntegers
 
     [Benchmark]
     [ArgumentsSource(nameof(Data))]
-    public int Solution(int num1, int num2) => _problem2235AddTwoIntegers.Sum(num1, num2);
+    public int Sum(int num1, int num2) => Problem2235AddTwoIntegers.Sum(num1, num2);
 }

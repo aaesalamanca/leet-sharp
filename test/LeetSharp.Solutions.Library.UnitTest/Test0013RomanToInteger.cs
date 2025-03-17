@@ -8,6 +8,6 @@ public class Test0013RomanToInteger
     [InlineData("III", 3)]
     [InlineData("LVIII", 58)]
     [InlineData("MCMXCIV", 1994)]
-    public void RomanToInteger_ReturnsTarget(string s, int expected) =>
+    public void RomanToInt_ReturnsTarget(string s, int expected) =>
         Assert.Equal(expected, RomanToInt(s));
 }

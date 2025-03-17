@@ -1,5 +1,7 @@
 namespace LeetSharp.Solutions.Library.UnitTest;
 
+using static Problem0013RomanToInteger;
+
 public class Test0013RomanToInteger
 {
     [Theory]
@@ -7,5 +9,5 @@ public class Test0013RomanToInteger
     [InlineData("LVIII", 58)]
     [InlineData("MCMXCIV", 1994)]
     public void RomanToInteger_ReturnsTarget(string s, int expected) =>
-        Assert.Equal(expected, Problem0013RomanToInteger.RomanToInt(s));
+        Assert.Equal(expected, RomanToInt(s));
 }

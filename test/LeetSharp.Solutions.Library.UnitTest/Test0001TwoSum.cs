@@ -1,5 +1,7 @@
 ﻿namespace LeetSharp.Solutions.Library.UnitTest;
 
+using static Problem0001TwoSum;
+
 public class Test0001TwoSum
 {
     [Theory]
@@ -8,8 +10,8 @@ public class Test0001TwoSum
     [InlineData(new[] { 3, 3 }, 6, new[] { 0, 1 })]
     public void TwoSum_ReturnsTarget(int[] nums, int target, int[] expected)
     {
-        Assert.Equal(expected, Problem0001TwoSum.TwoSumBruteForce(nums, target));
-        Assert.Equal(expected, Problem0001TwoSum.TwoSumTwoPassDictionary(nums, target));
-        Assert.Equal(expected, Problem0001TwoSum.TwoSumOnePassDictionary(nums, target));
+        Assert.Equal(expected, TwoSumBruteForce(nums, target));
+        Assert.Equal(expected, TwoSumTwoPassDictionary(nums, target));
+        Assert.Equal(expected, TwoSumOnePassDictionary(nums, target));
     }
 }

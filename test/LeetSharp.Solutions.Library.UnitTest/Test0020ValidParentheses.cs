@@ -12,6 +12,6 @@ public class Test0020ValidParentheses
     [InlineData("]", false)]
     [InlineData("){", false)]
     [InlineData("(])", false)]
-    public void ValidParentheses_ReturnsTarget(string s, bool expected) =>
+    public void IsValid_ReturnsTarget(string s, bool expected) =>
         Assert.Equal(expected, IsValid(s));
 }

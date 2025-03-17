@@ -1,5 +1,5 @@
 using BenchmarkDotNet.Attributes;
-using LeetSharp.Solutions.Library;
+using static LeetSharp.Solutions.Library.Problem0001TwoSum;
 
 namespace LeetSharp.Benchmarks.Console;
 
@@ -23,16 +23,15 @@ public class Benchmark0001TwoSum
 
     [Benchmark(Baseline = true)]
     [ArgumentsSource(nameof(Data))]
-    public int[] TwoSumBruteForce(int[] nums, int target) =>
-        Problem0001TwoSum.TwoSumBruteForce(nums, target);
+    public int[] Bench_TwoSumBruteForce(int[] nums, int target) => TwoSumBruteForce(nums, target);
 
     [Benchmark]
     [ArgumentsSource(nameof(Data))]
-    public int[] TwoSumTwoPassDictionary(int[] nums, int target) =>
-        Problem0001TwoSum.TwoSumTwoPassDictionary(nums, target);
+    public int[] Bench_TwoSumTwoPassDictionary(int[] nums, int target) =>
+        TwoSumTwoPassDictionary(nums, target);
 
     [Benchmark]
     [ArgumentsSource(nameof(Data))]
-    public int[] TwoSumOnePassDictionary(int[] nums, int target) =>
-        Problem0001TwoSum.TwoSumOnePassDictionary(nums, target);
+    public int[] Bench_TwoSumOnePassDictionary(int[] nums, int target) =>
+        TwoSumOnePassDictionary(nums, target);
 }

@@ -1,5 +1,5 @@
 using BenchmarkDotNet.Attributes;
-using LeetSharp.Solutions.Library;
+using static LeetSharp.Solutions.Library.Problem0020ValidParentheses;
 
 namespace LeetSharp.Benchmarks.Console;
 
@@ -20,5 +20,5 @@ public class Benchmark0020ValidParentheses
 
     [Benchmark]
     [ArgumentsSource(nameof(Data))]
-    public bool IsValid(string s) => Problem0020ValidParentheses.IsValid(s);
+    public bool Bench_IsValid(string s) => IsValid(s);
 }

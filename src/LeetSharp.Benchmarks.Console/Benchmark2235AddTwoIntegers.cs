@@ -1,5 +1,5 @@
 using BenchmarkDotNet.Attributes;
-using LeetSharp.Solutions.Library;
+using static LeetSharp.Solutions.Library.Problem2235AddTwoIntegers;
 
 namespace LeetSharp.Benchmarks.Console;
 
@@ -15,5 +15,5 @@ public class Benchmark2235AddTwoIntegers
 
     [Benchmark]
     [ArgumentsSource(nameof(Data))]
-    public int Sum(int num1, int num2) => Problem2235AddTwoIntegers.Sum(num1, num2);
+    public int Bench_Sum(int num1, int num2) => Sum(num1, num2);
 }

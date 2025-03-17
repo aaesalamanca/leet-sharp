@@ -1,5 +1,5 @@
 using BenchmarkDotNet.Attributes;
-using LeetSharp.Solutions.Library;
+using static LeetSharp.Solutions.Library.Problem0013RomanToInteger;
 
 namespace LeetSharp.Benchmarks.Console;
 
@@ -16,5 +16,5 @@ public class Benchmark0013RomanToInteger
 
     [Benchmark]
     [ArgumentsSource(nameof(Data))]
-    public int RomanToInt(string s) => Problem0013RomanToInteger.RomanToInt(s);
+    public int Bench_RomanToInt(string s) => RomanToInt(s);
 }
